@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Cards List</h2>
+                    <br />
+                    <br />
+                    <a href="/cards/create">New Card</a>
+                </div>
+                <table class="table dataTable">
+                    <thead>
+                        <tr>
+                            <th>Gatherer Id</th>
+                            <th>English Name</th>
+                            <th>PtBr Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div th:replace="layout :: site-scripts" />
+    </div>
+</body>
+</html>

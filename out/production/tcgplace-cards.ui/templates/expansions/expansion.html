@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper" th:replace="layout :: site-header" />
+    <div id="page" class="container" th:fragment="layout :: site-content">
+        <div id="content" >
+            <a href="/cards">All</a>
+
+            <div class="title">
+                <h2>By Expansion</h2>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

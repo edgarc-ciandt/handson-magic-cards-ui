@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Cards List</h2>
+                </div>
+                <form action="/cards/update" th:object="${card}" method="post">
+                    <label for="gathererId">Gatherer Id:</label>
+                    <input type="text" id="gathererId" name="gathererId" th:value="*{gathererId}" /><br /><br />
+                    <label for="searchName">Search Name:</label>
+                    <input type="text" id="searchName" name="searchName" th:value="*{searchName}" /><br /><br />
+                    <label for="englishName">English Name:</label>
+                    <input type="text" id="englishName" name="englishName" th:value="*{englishName}" /><br /><br />
+                    <label for="linkName">Link Name:</label>
+                    <input type="text" id="linkName" name="linkName" th:value="*{linkName}" /><br /><br />
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" name="color" th:value="*{color}" /><br /><br />
+                    <label for="rarity">Rarity:</label>
+                    <input type="text" id="rarity" name="rarity" th:value="*{rarity}" /><br /><br />
+                    <label for="rules">Rules:</label>
+                    <input type="text" id="rules" name="rules" th:value="*{rules}" /><br /><br />
+                    <label for="flavorText">Flavor Text:</label>
+                    <input type="text" id="flavorText" name="flavorText" th:value="*{flavorText}" /><br /><br />
+                    <label for="superTypes">Super Types:</label>
+                    <input type="text" id="superTypes" name="superTypes" th:value="*{superTypes}" /><br /><br />
+                    <label for="cardTypes">Card Types:</label>
+                    <input type="text" id="cardTypes" name="cardTypes" th:value="*{cardTypes}" /><br /><br />
+                    <label for="expansionId">Expansion Id:</label>
+                    <input type="text" id="expansionId" name="expansionId" th:value="*{expansionId}" /><br /><br />
+                    <label for="artistId">Artist Id:</label>
+                    <input type="text" id="artistId" name="artistId" th:value="*{artistId}" /><br /><br /><br />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div th:replace="layout :: site-scripts" />
+    </div>
+</body>
+</html>

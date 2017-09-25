@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper" th:replace="layout :: site-header" />
+    <div id="page" class="container" th:fragment="layout :: site-content">
+        <div id="content" >
+            <div class="title">
+                <h2>Cards Expansion</h2>
+            </div>
+            <form action="/cards/expasion/create" method="post">
+                <label for="expasionId">Expasion Id:</label>
+                <input type="text" id="expasionId" name="expasionId" /><br /><br />
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" /><br /><br />
+                <label for="portugueseName">Portuguese Name:</label>
+                <input type="text" id="portugueseName" name="portugueseName" /><br /><br />
+                <label for="linkName">Link Name:</label>
+                <input type="text" id="linkName" name="linkName" /><br /><br />
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" /><br /><br />
+                <label for="launchDate">Launch Date:</label>
+                <input type="date" id="launchDate" name="launchDate" /><br /><br />
+                <label for="expasionCategoryId">Expasion Category:</label>
+                <input type="text" id="expasionCategoryId" name="expasionCategoryId" /><br /><br />
+                <label for="isPromo">Promo:</label>
+                <input type="checkbox" id="isPromo" name="isPromo" /><br /><br />
+                <label for="isLegal">Legal:</label>
+                <input type="checkbox" id="isLegal" name="isLegal" /><br /><br />
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div th:replace="layout :: site-scripts" />
+</div>
+</body>
+</html>

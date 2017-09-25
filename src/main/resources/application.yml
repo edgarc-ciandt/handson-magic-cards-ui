@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+rest.client:
+  cards.url: http://localhost:8081
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
