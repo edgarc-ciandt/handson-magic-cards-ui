@@ -1,7 +1,7 @@
-package com.tcgplacecards.ui.proxies;
+package magiccards.ui.proxies;
 
-import com.tcgplacecards.ui.entities.Card;
-import com.tcgplacecards.ui.entities.Page;
+import magiccards.ui.entities.Card;
+import magiccards.ui.entities.Page;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;

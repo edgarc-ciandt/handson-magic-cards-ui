@@ -1,9 +1,9 @@
-package com.tcgplacecards.ui.controllers;
+package magiccards.ui.controllers;
 
-import com.tcgplacecards.ui.entities.Card;
-import com.tcgplacecards.ui.entities.Page;
-import com.tcgplacecards.ui.entities.TablePage;
-import com.tcgplacecards.ui.proxies.CardsFacadeProxy;
+import magiccards.ui.entities.Card;
+import magiccards.ui.entities.Page;
+import magiccards.ui.entities.TablePage;
+import magiccards.ui.proxies.CardsFacadeProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

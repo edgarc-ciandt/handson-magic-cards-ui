@@ -1,4 +1,4 @@
-package com.tcgplacecards.ui.entities;
+package magiccards.ui.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
