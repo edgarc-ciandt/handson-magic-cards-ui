@@ -9,3 +9,11 @@ logging:
     org:
       springframework:
         web: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 15000
+        readTimeout: 15000
+        loggerLevel: full
