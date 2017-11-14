@@ -9,3 +9,13 @@ logging:
     org:
       springframework:
         web: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+        loggerLevel: full
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 30000
