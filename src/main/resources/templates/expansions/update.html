@@ -16,8 +16,8 @@
                     <input type="text" id="expansionId" name="expansionId" th:value="*{expansionId}" /><br /><br />
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" th:value="*{name}" /><br /><br />
-                    <label for="englishName">English Name:</label>
-                    <input type="text" id="englishName" name="englishName" th:value="*{englishName}" /><br /><br />
+                    <label for="ptBrName">PtBt Name:</label>
+                    <input type="text" id="ptBrName" name="ptBrName" th:value="*{ptBrName}" /><br /><br />
                     <label for="linkName">Link Name:</label>
                     <input type="text" id="linkName" name="linkName" th:value="*{linkName}" /><br /><br />
                     <label for="code">Code:</label>
@@ -27,9 +27,9 @@
                     <label for="expansionCategoryId">Expansion Id:</label>
                     <input type="text" id="expansionCategoryId" name="expansionCategoryId" th:value="*{expansionCategoryId}" /><br /><br />
                     <label for="isPromo">Promo:</label>
-                    <input type="checkbox" id="isPromo" name="isPromo" th:value="*{isPromo}"/><br /><br />
+                    <input type="checkbox" id="isPromo" name="isPromo" th:field="*{isPromo}"/><br /><br />
                     <label for="isLegal">Legal:</label>
-                    <input type="checkbox" id="isLegal" name="isLegal" th:value="*{isLegal}"/><br /><br />
+                    <input type="checkbox" id="isLegal" name="isLegal" th:field="*{isLegal}"/><br /><br />
                     <button type="submit">Submit</button>
                 </form>
             </div>
