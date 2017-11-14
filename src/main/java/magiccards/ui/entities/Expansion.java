@@ -14,7 +14,7 @@ public class Expansion {
     private String ptBrName;
     private String linkName;
     private String code;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date launchDate;
     private Integer expansionCategoryId;
     private Boolean isPromo;

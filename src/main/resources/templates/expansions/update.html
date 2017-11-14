@@ -23,8 +23,8 @@
                     <label for="code">Code:</label>
                     <input type="text" id="code" name="code" th:value="*{code}" /><br /><br />
                     <label for="launchDate">Launch Date:</label>
-                    <input type="date" id="launchDate" name="launchDate"  th:value="*{launchDate}"/><br /><br />
-                    <label for="expansionCategoryId">Expansion Id:</label>
+                    <input type="date" id="launchDate" name="launchDate"  th:field="*{launchDate}" th:value="*{launchDate}"/><br /><br />
+                    <label for="expansionCategoryId">Category Id:</label>
                     <input type="text" id="expansionCategoryId" name="expansionCategoryId" th:value="*{expansionCategoryId}" /><br /><br />
                     <label for="isPromo">Promo:</label>
                     <input type="checkbox" id="isPromo" name="isPromo" th:field="*{isPromo}"/><br /><br />

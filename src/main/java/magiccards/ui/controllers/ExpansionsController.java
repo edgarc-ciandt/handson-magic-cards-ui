@@ -24,7 +24,7 @@ public class ExpansionsController {
     @RequestMapping(value="/expansions/data", method = RequestMethod.GET)
     public @ResponseBody TablePage<Expansion> listPaged(@RequestParam("draw")int draw, @RequestParam("start")int start, @RequestParam("length")int length) {
 
-        int pageNumber = (start/length) + 1;
+        int pageNumber = (start/length);
         Page<Expansion> expansions = expansionsProxy.getexpansion(pageNumber, length);
 
         TablePage<Expansion> result = new TablePage<>();
