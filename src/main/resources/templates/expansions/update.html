@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Expansion Edit</h2>
+                </div>
+                <form action="/expansions/update" th:object="${entity}" method="post">
+                    <label for="expansionId">Expasion Id:</label>
+                    <input type="number" id="expansionId" name="expansionId"  th:field="*{expansionId}" /><br /><br />
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" th:field="*{name}" /><br /><br />
+                    <label for="portugueseName">Portuguese Name:</label>
+                    <input type="text" id="portugueseName" name="portugueseName"  th:field="*{portugueseName}" /><br /><br />
+                    <label for="linkName">Link Name:</label>
+                    <input type="text" id="linkName" name="linkName" th:field="*{linkName}" /><br /><br />
+                    <label for="code">Code:</label>
+                    <input type="text" id="code" name="code" th:field="*{code}"  /><br /><br />
+                    <label for="launchDate">Launch Date:</label>
+                    <input type="date" id="launchDate" name="launchDate" th:field="*{launchDate}" /><br /><br />
+                    <label for="expansionCategoryId">Expasion Category:</label>
+                    <input type="text" id="expansionCategoryId" name="expansionCategoryId" th:field="*{expansionCategoryId}" /><br /><br />
+                    <label for="promo">Promo:</label>
+                    <input type="checkbox" id="promo" name="promo" th:field="*{promo}" /><br /><br />
+                    <label for="legal">Legal:</label>
+                    <input type="checkbox" id="legal" name="legal"  th:field="*{legal}"  /><br /><br />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div th:replace="layout :: site-scripts" />
+    </div>
+</body>
+</html>
