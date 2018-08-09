@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.dataTable').DataTable( {
+    $('.dataTable.cards').DataTable( {
         "bFilter":false,
         "processing": true,
         "serverSide": true,
