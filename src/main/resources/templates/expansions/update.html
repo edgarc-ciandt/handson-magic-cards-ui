@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper" th:replace="layout :: site-header" />
+    <div id="page" class="container" th:fragment="layout :: site-content">
+        <div id="content" >
+            <div class="title">
+                <h2>Cards Expansion</h2>
+            </div>
+            <form action="/expansions/update" th:object="${expansion}" method="post">
+                <label for="expansionId">Expasion Id:</label>
+                <input type="text" id="expansionId" name="expansionId" th:value="*{expansionId}" /><br /><br />
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" th:value="*{name}" /><br /><br />
+                <label for="ptBrName">Portuguese Name:</label>
+                <input type="text" id="ptBrName" name="ptBrName"  th:value="*{ptBrName}" /><br /><br />
+                <label for="linkName">Link Name:</label>
+                <input type="text" id="linkName" name="linkName" th:value="*{linkName}" /><br /><br />
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code"  th:value="*{code}" /><br /><br />
+                <label for="launchDate">Launch Date:</label>
+                <input type="date" id="launchDate" name="launchDate"  th:value="*{launchDate}"/><br /><br />
+                <label for="expansionCategoryId">Expasion Category:</label>
+                <input type="text" id="expansionCategoryId" name="expansionCategoryId"  th:value="*{expansionCategoryId}" /><br /><br />
+                <label for="promo">Promo:</label>
+                <input type="checkbox" id="promo" name="promo" th:checked="${promo}" th:field="*{promo}" /><br /><br />
+                <label for="legal">Legal:</label>
+                <input type="checkbox" id="legal" name="legal" th:checked="${legal}" th:field="*{legal}"  /><br /><br />
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div th:replace="layout :: site-scripts" />
+</div>
+</body>
+</html>
