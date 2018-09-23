@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    $('.dataTable').DataTable( {
+    $('#idTableCard').DataTable( {
         "bFilter":false,
         "processing": true,
         "serverSide": true,
         "ajax": "/cards/data",
+        "destroy": true,
         "columns": [
             {"data":"gathererId"},
             {"data":"englishName"},
