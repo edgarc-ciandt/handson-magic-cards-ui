@@ -3,8 +3,8 @@ package magiccards.ui.entities;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
+@Data
 public class Card {
 	private String gathererId;
 	private Integer variation;

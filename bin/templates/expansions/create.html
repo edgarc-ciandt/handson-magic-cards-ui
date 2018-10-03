@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Home</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper" th:replace="layout :: site-header" />
+        <div id="page" class="container" th:fragment="layout :: site-content">
+            <div id="content" >
+                <div class="title">
+                    <h2>Expansions List</h2>
+                </div>
+                <form action="/cards/expansions/create" method="post">
+                  	<label for="expasionId">Expasion Id:</label>
+	                <input type="text" id="expasionId" name="expasionId" th:value="*{expasionId}"/><br /><br />
+	                <label for="name">Name:</label>
+	                <input type="text" id="name" name="name" th:value="*{name}"/><br /><br />
+	                <label for="portugueseName">Portuguese Name:</label>
+	                <input type="text" id="portugueseName" name="portugueseName" th:value="*{portugueseName}"/><br /><br />
+	                <label for="linkName">Link Name:</label>
+	                <input type="text" id="linkName" name="linkName" th:value="*{linkName}"/><br /><br />
+	                <label for="code">Code:</label>
+	                <input type="text" id="code" name="code" th:value="*{code}"/><br /><br />
+	                <label for="launchDate">Launch Date:</label>
+	                <input type="date" id="launchDate" name="launchDate" th:value="*{{launchDate}}"/><br /><br />
+	                <label for="expasionCategoryId">Expasion Category:</label>
+	                <input type="text" id="expasionCategoryId" name="expasionCategoryId" th:value="*{expasionCategoryId}"/><br /><br />
+	                <label for="promo">Promo:</label>
+	                <input th:type="checkbox" id="promo" th:name="promo" th:field="*{promo}" th:value="*{{promo}}"/><br /><br />
+	                <label for="legal">Legal:</label>
+	                <input th:type="checkbox" id="legal" th:name="legal" th:field="*{legal}" th:value="*{{legal}}"/><br /><br />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div th:replace="layout :: site-scripts" />
+    </div>
+</body>
+</html>
